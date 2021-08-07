@@ -1,0 +1,111 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #2d3436; */
+    background-image: url("https://amymhaddad.s3.amazonaws.com/oriental-tiles.png");
+
+}
+.todo-list{
+    width: 350px;
+    color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.todo-list header {
+    margin: 0;
+    padding: 1em 0;
+    color: #a284c3;
+    text-align: center;
+    border-top: 1em solid #c3ae49 ;
+    border-bottom: 1px solid #eeeeee;
+    border-top-left-radius: 1em;
+    border-top-right-radius: 1em;
+    background-color: #fff;
+}
+.todo-list footer {
+    margin: 0;
+    padding: .7em 0;
+    border-top: 1px solid #eeeeee;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    background-color:#fff ;
+}
+.todo-list .do input[type=checkbox]{
+    position: absolute;
+    width: 0;
+    height: 0;
+       
+}
+.todo-list .do label{
+    position: relative;
+    display: block;
+    padding: .75em 1em;
+    cursor: pointer;
+    color: black;
+    background-color: #fff;
+    transition: .3s ease-in-out;
+}
+.todo-list .do label:hover{
+    transform: translateX(-1em);
+}
+.todo-list .do label::before{
+    content: "";
+    display: none;
+    width: 24px;
+    height: 24px;
+    border:1px solid#cccccc;
+    border-radius: 30%;
+    vertical-align: middle ;
+    margin-right: .5em;
+}
+.todo-list .do label::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 0;
+    background-color: #c3ae49;
+    transition: .3s ease-in-out;
+}
+.todo-list .do label:hover::after{
+    width:  5px;
+}
+
+.todo-list .do input[type=checkbox] + label {
+    opacity: 1;
+}
+.todo-list .do label .label {
+    position: relative;
+    color: #2d3436;
+    transition: .3s ease-in-out;
+}
+.todo-list .do input[type=checkbox]:checked + label .label {
+    color: #aaaaaa;
+}
+.todo-list .do label .label::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    right: 100%;
+    top:50%;
+    height: 1px;
+    background-color: #aaaaaa;
+    transition: .3s ease-in-out;
+}
+.todo-list .do label .label::after{
+    content: "";
+    position:absolute;
+    left: 0;
+    right: 100%;
+    top:50%;
+    height: 1px;
+    background-color: #aaaaaa;
+    transition: .3s ease-in-out;
+}
+.todo-list .do input[type=checkbox]:checked + label .label::after{
+    right: 0;
+}
